@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASTRAL OS | v1.0.0 Beta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: #050505; color: white; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+
+        .hero-gradient {
+            background: radial-gradient(circle at center, #1e3a8a 0%, #050505 80%);
+        }
+
+        .download-glow {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .download-glow:hover {
+            box-shadow: 0 0 40px rgba(59, 130, 246, 0.7);
+            transform: scale(1.02);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="flex justify-between items-center p-8 max-w-7xl mx-auto">
+        <div class="text-2xl font-bold tracking-tighter text-blue-500 italic">ASTRAL</div>
+        <div class="space-x-12 flex text-xs uppercase tracking-[0.3em] font-medium text-gray-400">
+            <a href="#requirements" class="hover:text-white transition">Requirements</a>
+            <a href="#features" class="hover:text-white transition">Features</a>
+        </div>
+    </nav>
+
+    <div class="bg-red-500/10 py-3 border-y border-red-500/20 text-center">
+        <p class="text-[10px] md:text-xs uppercase tracking-[0.2em] text-red-400 font-bold px-4">
+            ⚠️ Attention: v1.0.0 is a Beta Release. Expect bugs. Emulator execution recommended.
+        </p>
+    </div>
+
+    <header class="hero-gradient min-h-[70vh] flex flex-col items-center justify-center text-center px-4">
+        <div class="mb-4 px-3 py-1 border border-blue-500/30 rounded-full text-[10px] uppercase tracking-widest text-blue-400 bg-blue-500/10">
+            Early Access Beta
+        </div>
+        <h1 class="text-6xl md:text-8xl font-extrabold mb-6 tracking-tight">
+            ASTRAL <span class="text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">OS</span>
+        </h1>
+
+        <div class="flex flex-col items-center gap-6 mt-4">
+            <a href="AOS_v1.0.0.zip" download class="download-glow px-10 py-4 bg-white text-black font-bold rounded-full text-lg hover:bg-blue-50 transition-colors">
+                Download Astral OS v1.0.0
+            </a>
+            <p class="text-[11px] text-gray-500 uppercase tracking-widest">Version 1.0.0-beta</p>
+        </div>
+    </header>
+
+    <section id="requirements" class="max-w-4xl mx-auto py-20 px-6">
+        <div class="glass-card p-8 md:p-12 rounded-3xl">
+            <h2 class="text-2xl font-bold mb-8 text-center tracking-tight">System Prerequisites</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <ul class="space-y-4 text-sm text-gray-300">
+                    <li class="flex items-start gap-3">
+                        <span class="text-blue-500 mt-1">▹</span>
+                        <span><strong>QEMU version 10.2.0 installed for Windows</strong> (Ensure it is added to your System PATH).</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-blue-500 mt-1">▹</span>
+                        <span><strong>64-bit CPU</strong> with adequate free memory for virtualization/emulation.</span>
+                    </li>
+                </ul>
+                <ul class="space-y-4 text-sm text-gray-300">
+                    <li class="flex items-start gap-3">
+                        <span class="text-blue-500 mt-1">▹</span>
+                        <span>Permission to run <strong>.bat and PowerShell scripts</strong> locally.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-blue-500 mt-1">▹</span>
+                        <span>The full <strong>Astral OS</strong> folder must be kept together to run properly.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="max-w-6xl mx-auto py-20 px-6 grid md:grid-cols-3 gap-12 border-t border-white/5">
+        <div class="space-y-4">
+            <div class="h-1 w-12 bg-blue-600"></div>
+            <h3 class="text-lg font-bold uppercase tracking-wider">Nano-Kernel</h3>
+            <p class="text-gray-500 text-sm leading-relaxed text-balance">Experimental microkernel architecture designed for high-concurrency and modern thread safety.</p>
+        </div>
+        <div class="space-y-4">
+            <div class="h-1 w-12 bg-purple-600"></div>
+            <h3 class="text-lg font-bold uppercase tracking-wider">Encrypted Root</h3>
+            <p class="text-gray-500 text-sm leading-relaxed text-balance">Secure boot protocols currently in testing. Built with privacy-preserving defaults.</p>
+        </div>
+        <div class="space-y-4">
+            <div class="h-1 w-12 bg-gray-600"></div>
+            <h3 class="text-lg font-bold uppercase tracking-wider">Debugger Tools</h3>
+            <p class="text-gray-500 text-sm leading-relaxed text-balance">Includes integrated tracing tools to help developers log and report system-level crashes.</p>
+        </div>
+    </section>
+
+    <footer class="py-20 border-t border-white/5 text-center">
+        <div class="text-blue-500/50 text-xl font-bold mb-4 italic">ASTRAL</div>
+        <p class="text-gray-600 text-[10px] tracking-widest uppercase">
+            &copy; 2026 Astral Project. Virtualized environments are recommended for all beta versions.
+        </p>
+    </footer>
+
+</body>
+</html>
